@@ -54,9 +54,9 @@ class Solution(object):
         res = []
         add_next = 0
         for v1, v2 in zip(l1, l2):
-            v = v1 + v2 + add_next
-            res.append(v % 10)
-            add_next = int(v / 10)
+            div, mod = divmod(v1 + v2 + add_next, 10)
+            res.append(mod)
+            add_next = div
         if add_next:
             res.append(add_next)
         # print(res)
