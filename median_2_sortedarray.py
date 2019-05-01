@@ -28,7 +28,7 @@ The median is (2 + 3)/2 = 2.5
 
 
 class Solution:
-    def findMedianSortedArrays(self, nums1: list[int], nums2: list[int]) -> float:
+    def findMedianSortedArrays(self, nums1, nums2):
 
         n = len(nums1) + len(nums2)
         for indx in range(n // 2 + 1):
